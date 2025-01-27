@@ -1,7 +1,3 @@
-Here's the updated README with a concise section for tests:
-
----
-
 # Real-Time Person Counting API
 
 ## Overview
