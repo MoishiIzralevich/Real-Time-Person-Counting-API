@@ -1,3 +1,7 @@
+Here's the updated README with a concise section for tests:
+
+---
+
 # Real-Time Person Counting API
 
 ## Overview
@@ -50,7 +54,7 @@ This will start the server at `http://127.0.0.1:8000`.
 - **Request**: Video file in the form-data.
 - **Query Parameter**: 
 
-  `use_gender_classification` (optional, default `false`): - If set to `true`, gender classification (Male/Female) will be applied.
+  `use_gender_classification` (optional, default `false`): If set to `true`, gender classification (Male/Female) will be applied.
 
   `save_output` (optional, default `false`): If set to `true`, the processed video will be saved and the output video path will be included in the response.
   
@@ -65,8 +69,7 @@ This will start the server at `http://127.0.0.1:8000`.
 curl -X POST "http://127.0.0.1:8000/process-video/?use_gender_classification=false&save_output=true" 
     -H "accept: application/json" 
     -H "Content-Type: multipart/form-data" 
-    -F "file=@./police_1_minute.mp4"
-
+    -F "file=@./videos/police_1_minute.mp4"
 ```
 
 #### Example Response:
@@ -91,4 +94,16 @@ The response will contain:
 
 - **app.py**: FastAPI application file with the `/process-video` endpoint.
 - **models/**: Contains the YOLO and gender classification models.
+- **videos/**: Contains the videos for testing.
+- **tests/**: Contains the testing file.
 - **requirements.txt**: Lists the project dependencies.
+
+## Tests
+
+To run the tests, use the following command:
+
+```bash
+pytest
+```
+
+The tests ensure that the API processes videos correctly and returns accurate results based on the given parameters.

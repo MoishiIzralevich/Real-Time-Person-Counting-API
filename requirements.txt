@@ -5,3 +5,6 @@ ultralytics
 supervision
 numpy
 python-multipart
+pytest
+httpx
+pytest-asyncio
